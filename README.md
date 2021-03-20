@@ -1,34 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Personal and experimental portfolio
+===
 
-## Getting Started
+My personal experimental portfolio. Features a JavaScript client and CMS which uses Next.JS. Also used PostgreSQL to store user, work, and blog data for testing and present.
 
-First, run the development server:
+Who am I?
+---
+Just another full-stack developer / graphic designer.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+As a graphic designer, I expertise in producing, branding, and managing with corporate identities, vector/pixel graphics, photo editing, UI/UX design, printed/web deployed materials, and advertisement campaigns. Proficient in delivering visual languages as well as logical mapping in developments.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Also as a developer, I am proficient in Front end and Back end, and I use object oriented computer languages, frameworks, and APIs.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+###### Skills - Development: `HTML` `CSS` `JavaScript` `Python` `Dart` `React` `Flutter` `Express.js` `Node.js` `MongoDB` `PostgreSQL` `EJS` `Next.js` `Flask` `Material-UI` 
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+###### Skills - Graphic Design: `Photoshop` `illustrator` `inDesign` `Principle` `Sketch` `Figma` `Premier` `XD`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<!-- add link to linkedIn, resume -->
+<!-- add link to portfolio -->
 
-## Learn More
+Wireframe
+---
+• Whole Plan
+![](https://i.imgur.com/828D0Qp.png)
 
-To learn more about Next.js, take a look at the following resources:
+UI/UX Design
+---
+• Installed Material-UI to start with, and in a long-term, will be replaced with JS elements one by one.
+ 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Auth
+---
+• Only admin can log in to the site to add blog posts and work posts (login page link will be hidden)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+• Maybe I will add test admin to explore adding forms
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+###### Tech used for this portfolio: `Next.js` `Material-UI` `PostgreSQL` `jwt` `Prisma` `NextAuth.js`
