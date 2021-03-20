@@ -1,10 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-export default function Lab( { posts }) {
-
-  console.log(posts)
-
+export default function Lab({ posts }) {
 
   return (
     <div>
