@@ -1,11 +1,10 @@
 import Head from 'next/head'
-import { useEffect } from 'react'
+import Link from 'next/link'
 
 export default function Lab( { posts }) {
 
-  // useEffect(() => {
+  console.log(posts)
 
-  // })
 
   return (
     <div>
@@ -19,8 +18,8 @@ export default function Lab( { posts }) {
         {posts &&
           posts.map((post) => (
             <div key={post.id}>
-              <h2>{post.Title}</h2>
-              <div>{post.User.username}</div>
+              <h2><Link href={`/lab/${post.Slug}`}><a>{post.Title}</a></Link></h2>
+              <div>author: {post.User.username}</div>
             </div>
           ))
         }
