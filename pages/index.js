@@ -11,7 +11,7 @@ export default function Home({ desWorks, devWorks }) {
     <div>
       <Head>
         <title>YK | Portfolio</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/img/favicon.ico" />
       </ Head>
       <Welcome />
       <Statement />
