@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: Nanum Gothic, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -23,6 +23,8 @@ a {
 }
 
 .header-nav {
+  position: fixed;
+  background-color: white;
   display: flex;
   justify-content: space-around;
   min-height: 8vh;
@@ -46,6 +48,8 @@ a {
 .nav-links a {
   text-decoration: none;
   font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .burger {
@@ -60,7 +64,7 @@ a {
   transition: all 0.3s ease;
 }
 
-/* ------------------------------------- header responsive */
+/* -------------------------------------  responsive */
 
 @media screen and (max-width: 1024px) {
   .nav-links {
@@ -76,8 +80,8 @@ a {
   .nav-links {
     position: fixed;
     right: 0px;
-    height: 92vh;
-    top: 8vh;
+    height: 93vh;
+    top: 5vh;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -125,6 +129,40 @@ a {
 
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ====================================== welcome.js */
+
+.welcome-container {
+  margin-top: 10vh;
+  height: 75vh;
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+#letter-on-top {
+  font-family: 'helvetica';
+  position: absolute;
+  bottom: 50vh;
+  left: 40vw;
+  transform: translateX(-50%);
+}
+
+#letter-on-middle {
+  font-family: 'helvetica';
+  position: absolute;
+  bottom: 45vh;
+  left: 50vw;
+  transform: translateX(-50%);
+}
+
+#letter-on-bottom {
+  font-family: 'helvetica';
+  position: absolute;
+  bottom: 40vh;
+  left: 60vw;
+  transform: translateX(-50%);
 }
 
 /* 

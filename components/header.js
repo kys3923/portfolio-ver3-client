@@ -32,10 +32,10 @@ const Header = (props) => {
       <Link href="/"><a><img id="header-logo" src="img/logo.png" /></a></Link>
       </div>
       <ul className="nav-links">
-        <li><Link href="/devworks"><a>Dev</a></Link></li>
-        <li><Link href="/designworks"><a>Design</a></Link></li>
-        <li><Link href="/lab"><a>Lab</a></Link></li>
-        <li><Link href="/"><a>Contact</a></Link></li>
+        <li><Link href="/devworks"><a>DEV</a></Link></li>
+        <li><Link href="/designworks"><a>DESIGN</a></Link></li>
+        <li><Link href="/lab"><a>LAB</a></Link></li>
+        <li><Link href="/"><a >CONTACT</a></Link></li>
       </ul>
       <div className="burger" onClick={navSlide}>
         <div className="line1"></div>
