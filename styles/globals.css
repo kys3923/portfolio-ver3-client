@@ -134,37 +134,78 @@ a {
 /* ====================================== welcome.js */
 
 .welcome-container {
-  margin-top: 10vh;
-  height: 75vh;
+  margin-top: 15vh;
+  padding-left: 4vw;
+  height: 55vh;
   width: 100%;
-  position: relative;
-  z-index: -1;
+  z-index: -5;
+  text-align: center;
+}
+
+/* .layer {
+  display: block;
 }
 
 #letter-on-top {
   font-family: 'helvetica';
+  font-size: 6em;
+}
+#letter-on-middle {
+  font-family: 'helvetica';
+  font-size: 30em;
+}
+#letter-on-bottom {
+  font-family: 'helvetica';
+  font-size: 6em;
+} */
+
+
+#letter-on-top {
+  font-family: 'helvetica';
   position: absolute;
-  bottom: 50vh;
-  left: 40vw;
-  transform: translateX(-50%);
+  font-size: 3em;
+  top: 190px;
+  left: 60px;
+  z-index: -2;
 }
 
 #letter-on-middle {
   font-family: 'helvetica';
   position: absolute;
-  bottom: 45vh;
-  left: 50vw;
-  transform: translateX(-50%);
+  font-size: 14.5em;
+  z-index: -3;
+  color: grey;
+  left: 120px;
+  top: -11px;
 }
 
 #letter-on-bottom {
   font-family: 'helvetica';
   position: absolute;
-  bottom: 40vh;
-  left: 60vw;
-  transform: translateX(-50%);
+  font-size: 3em;
+  top: 230px;
+  left: 100px;
+  z-index: -2;
 }
 
+
+/* -------------------------------------- statement */
+
+.statement-container {
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.statement {
+  padding: 1em;
+  padding-top: 12vh;
+  display: block;
+  width: 80%;
+}
 /* 
 @tailwind base;
 @tailwind components;
