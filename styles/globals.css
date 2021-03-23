@@ -298,3 +298,91 @@ a {
 }
 
 /* =========================================== dev works title */
+
+.title-devworks {
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.title-devworks h3 {
+  background-color: black;
+  display: block;
+  width: 66%;
+  font-weight: bold;
+  font-size: 3em;
+  text-transform: capitalize;
+  color: white;
+  line-height: 2em;
+  padding-left: 1em;
+  border-radius: 3px;
+}
+
+/* ============================================ dev works cards */
+
+.devWorks-container {
+  margin-bottom: 20vh;
+}
+
+.devWorks-card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 10vh;
+}
+
+.devWorks-card-image {
+  width: 60%;
+}
+
+.devWorks-card-image img {
+  width: 100%;
+  height: 45vh;
+  object-fit: cover;
+}
+
+.devWorks-text {
+  padding-left: 2em;
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.devWorks-text h3 {
+  font-weight: bold;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.devWorks-text-tech {
+  display: inline-block;
+  color: white;
+  padding: 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 30px;
+  background-color: gray;
+}
+
+@media screen and (max-width: 768px) {
+  .devWorks-card-image {
+    width: 100%;
+  }
+
+  .devWorks-text {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .devWorks-text a {
+    width: 100%;
+  }
+}

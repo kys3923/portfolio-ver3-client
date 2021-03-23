@@ -7,7 +7,9 @@ export default function DesignWorks( { works }) {
     <div>
       <Head>
         <title>YK | Design</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/img/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet"></link>
       </ Head>
 
       <main>
@@ -27,7 +29,7 @@ export default function DesignWorks( { works }) {
 export async function getStaticProps() {
 
   // get posts from the api
-  const res = await fetch('http://localhost:1337/design-works');
+  const res = await fetch('https://enigmatic-journey-17277.herokuapp.com/design-works');
   const works = await res.json();
 
   return {

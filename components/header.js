@@ -29,7 +29,7 @@ const Header = (props) => {
   return (
     <nav className="header-nav">
       <div className="logo">
-      <Link href="/"><a><img id="header-logo" src="img/logo.png" /></a></Link>
+      <Link href="/"><a><img id="header-logo" src="/img/logo.png" /></a></Link>
       </div>
       <ul className="nav-links">
         <li><Link href="/devworks"><a>DEV</a></Link></li>
