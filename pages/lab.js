@@ -10,15 +10,19 @@ export default function Lab({ posts }) {
         <link rel="icon" href="/img/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet"></link>
+        <script src="https://kit.fontawesome.com/2862dff1da.js" crossorigin="anonymous"></script>
       </ Head>
 
-      <main>
+      <main className="dev-page-container">
+        <div className="placeholder">
+
+        </div>
         {/* getting the posts */}
         {posts &&
           posts.map((post) => (
             <div key={post.id}>
               <h2><Link href={`/lab/${post.Slug}`}><a>{post.Title}</a></Link></h2>
-              <div>author: {post.User.username}</div>
+              <h3>author: {post.user.username}</h3>
             </div>
           ))
         }

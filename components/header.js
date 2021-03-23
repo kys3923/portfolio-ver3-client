@@ -35,7 +35,7 @@ const Header = (props) => {
         <li><Link href="/devworks"><a>DEV</a></Link></li>
         <li><Link href="/designworks"><a>DESIGN</a></Link></li>
         <li><Link href="/lab"><a>LAB</a></Link></li>
-        <li><Link href="/"><a >CONTACT</a></Link></li>
+        <li><Link href="/"><a disabled="disabled">CONTACT</a></Link></li>
       </ul>
       <div className="burger" onClick={navSlide}>
         <div className="line1"></div>

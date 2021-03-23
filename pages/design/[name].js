@@ -9,9 +9,34 @@ export default function DevWork({ work }) {
         <link rel="icon" href="/img/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet"></link>
+        <script src="https://kit.fontawesome.com/2862dff1da.js" crossorigin="anonymous"></script>
       </ Head>
-      <h3>{work.name}</h3>
-      <p>{work.task}</p>
+      <div className="dev-page-container2">
+        <div className="dev-page-intro">
+          <h3>{work.name}.</h3>
+        </div>
+        <div className="dev-page-detail">
+          <h3>Project Name: {work.name}</h3>
+          <h5>{work.type}</h5>
+          <ul>
+            <p>Tech used:</p>
+            {work.tech.map((skill) => (
+              <span key={skill.id}>{skill.tech} &nbsp; </span>
+            ))}
+          </ul>
+        </div>
+        <div className="dev-page-image">
+          {work.images.map((image) => (
+            <div key={image.id} className="page-image">
+              <img src={image.image} />
+            </div>
+          ))}
+        </div>
+        <div className="dev-page-detail2">
+          <p>{work.task}</p>
+          <p>{work.solution}</p>
+        </div>
+      </div>
     </div>
   )
 }
