@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { API_URL } from '../utils/urls'
+
 
 export default function DesignWorks( { works }) {
 
@@ -34,7 +36,7 @@ export default function DesignWorks( { works }) {
 export async function getStaticProps() {
 
   // get posts from the api
-  const res = await fetch('https://enigmatic-journey-17277.herokuapp.com/design-works');
+  const res = await fetch(`${API_URL}/design-works`);
   const works = await res.json();
 
   return {

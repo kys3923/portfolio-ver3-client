@@ -1,0 +1,1 @@
+export const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://enigmatic-journey-17277.herokuapp.com'

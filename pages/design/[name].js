@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import { API_URL } from '../../utils/urls'
+
 
 
 export default function DevWork({ work }) {
@@ -43,7 +45,7 @@ export default function DevWork({ work }) {
 
 // tell next.js how many pages there are
 export async function getStaticPaths() {
-  const res = await fetch('https://enigmatic-journey-17277.herokuapp.com/design-works');
+  const res = await fetch(`${API_URL}/design-works`);
   const works = await res.json();
 
   const paths = works.map((work) => ({
@@ -62,7 +64,7 @@ export async function getStaticProps({ params }) {
 
   const { name } = params;
 
-  const res = await fetch(`https://enigmatic-journey-17277.herokuapp.com/design-works?name=${name}`)
+  const res = await fetch(`${API_URL}/design-works?name=${name}`)
   const data = await res.json()
 
   const work = data[0];

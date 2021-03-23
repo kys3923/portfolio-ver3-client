@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { API_URL } from '../utils/urls'
 
 export default function Lab({ posts }) {
 
@@ -34,7 +35,7 @@ export default function Lab({ posts }) {
 export async function getStaticProps() {
 
   // get posts from the api
-  const res = await fetch('https://enigmatic-journey-17277.herokuapp.com/posts');
+  const res = await fetch(`${API_URL}/posts`);
   const posts = await res.json();
 
   return {

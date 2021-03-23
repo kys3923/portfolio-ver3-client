@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { API_URL } from '../utils/urls'
+
 
 // importing pages
 import Welcome from '../components/landing/welcome'
@@ -70,8 +72,8 @@ export default function Home({ desWorks, devWorks }) {
 export async function getStaticProps() {
 
   // get posts from the api
-  const resDesign = await fetch('https://enigmatic-journey-17277.herokuapp.com/design-works');
-  const resDev = await fetch('https://enigmatic-journey-17277.herokuapp.com/dev-works');
+  const resDesign = await fetch(`${API_URL}/design-works`);
+  const resDev = await fetch(`${API_URL}/dev-works`);
   const desWorks = await resDesign.json();
   const devWorks = await resDev.json();
 
