@@ -17,7 +17,9 @@ export default function Home({ desWorks, devWorks }) {
       </ Head>
       <Welcome />
       <Statement />
-      <h3>Recent Dev works</h3>
+      <div className="title-devworks">
+        <h3>Recent Dev works</h3>
+      </div>
       {devWorks &&
         devWorks.map((devWork) => (
           <div key={devWork.id}>

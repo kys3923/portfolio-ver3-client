@@ -31,6 +31,8 @@ a {
   top: 0;
   width: 100%;
   align-items: center;
+  padding-bottom: 1.5vh;
+  z-index: 10;
 }
 
 .nav-links {
@@ -142,6 +144,7 @@ a {
   text-align: center;
 }
 
+
 /* .layer {
   display: block;
 }
@@ -192,11 +195,13 @@ a {
 /* -------------------------------------- statement */
 
 .statement-container {
-  background-color: grey;
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 12vh;
+  z-index: -5;
 }
 
 
@@ -205,8 +210,91 @@ a {
   padding-top: 12vh;
   display: block;
   width: 80%;
+  color: white;
+  font-size: larger;
+  line-height: 1.5em;
+  font-style: italic;
 }
-/* 
-@tailwind base;
-@tailwind components;
-@tailwind utilities; */
+
+.skills {
+  padding-top: 3vh;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.skills h3 {
+  font-size: 2.5em;
+  margin-bottom: 10vh;
+  display: block;
+  width: 100%;
+}
+
+.skills-card {
+  position: relative;
+  background-color: gray;
+  width: 20rem;
+  height: 17rem;
+  /* add height */
+  margin: 5em 2em;
+  padding: 2em 1.5em;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s ease-in-out;
+  z-index: 1;
+  border-radius: 2px;
+}
+
+.skills-card:hover {
+  height: 30rem;
+
+}
+
+.skills-card-title {
+  background-color: white;
+  position: relative;
+  border-radius: 4px;
+  width: 17rem;
+  height: 17rem;
+  top: -5rem;
+  z-index: 0;
+}
+
+.skills-card-title h4 {
+  line-height: 14rem;
+  color: black;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.skills-card-content {
+  position: relative;
+  margin-top: -10rem;
+  text-align: left;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.skills-card:hover .skills-card-content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -7em;
+}
+
+.skills-card-content ul {
+  padding: 2em;
+}
+
+.skills-card-content li {
+  list-style: none;
+  line-height: 1.5em;
+}
+
+/* =========================================== dev works title */
