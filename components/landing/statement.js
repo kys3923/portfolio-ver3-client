@@ -7,7 +7,6 @@ const Statement = (props) => {
       </div>
       <div className="skills">
         <h3>Skills</h3>
-        {/* skills - center */}
         <div className="skills-card">
           <div className="skills-card-title">
             <h4>Languages</h4>

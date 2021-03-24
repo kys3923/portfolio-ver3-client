@@ -18,7 +18,6 @@ export default function Lab({ posts }) {
         <div className="placeholder">
 
         </div>
-        {/* getting the posts */}
         {posts &&
           posts.map((post) => (
             <div key={post.id}>
