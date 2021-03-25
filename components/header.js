@@ -21,10 +21,31 @@ const Header = (props) => {
         });
         //Burger Animation
         burger.classList.toggle("toggle");
-    });
-    
+    });  
   }
+    
+  function closeSlide() {
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector(".nav-links");
+    const navLinks = document.querySelectorAll(".nav-links li");
 
+    nav.addEventListener("click", (event) => {
+
+      nav.classList.toggle("nav-active")
+      
+      navLinks.forEach((link, index) => {
+        if (link.style.animation) {
+            link.style.animation = ""
+        } else {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+        }
+      });
+      //Burger Animation
+      burger.classList.toggle("toggle");
+    })
+
+  }
+  
 
   return (
     <nav className="header-nav">
@@ -32,10 +53,10 @@ const Header = (props) => {
       <Link href="/"><a><img id="header-logo" src="/img/logo.png" /></a></Link>
       </div>
       <ul className="nav-links">
-        <li><Link href="/devworks"><a>DEV</a></Link></li>
-        <li><Link href="/designworks"><a>DESIGN</a></Link></li>
-        <li><Link href="/lab"><a>LAB</a></Link></li>
-        <li><Link href="/"><a disabled="disabled">CONTACT</a></Link></li>
+        <li><Link href="/devworks" ><a onClick={closeSlide}>DEV</a></Link></li>
+        <li><Link href="/designworks" ><a onClick={closeSlide}>DESIGN</a></Link></li>
+        <li><Link href="/lab" ><a onClick={closeSlide}>LAB</a></Link></li>
+        <li><Link href="/" ><a onClick={closeSlide}>CONTACT</a></Link></li>
       </ul>
       <div className="burger" onClick={navSlide}>
         <div className="line1"></div>
