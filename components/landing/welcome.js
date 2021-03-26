@@ -52,27 +52,34 @@ const Welcome = (props) => {
 
   return (
     <Grid item xs={12}>
-      <Paper elevation={0} className={classes.paper}>
-        <motion.div className="motion-welcome-box1" style={{ color }}>
-          <Typography className={classes.firstLine} variant="h1">
-            DESIGN
+      <motion.div
+        key="welcomeJS"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity:0 }}
+      >
+        <Paper elevation={0} className={classes.paper}>
+          <motion.div className="motion-welcome-box1" style={{ color }}>
+            <Typography className={classes.firstLine} variant="h1">
+              DESIGN
+            </Typography>
+          </motion.div>
+          <motion.div className="motion-box" style={{ x }} drag="x" dragConstraints={{ left: 0, right: 0 }}>
+            <Typography className={classes.secondLine} variant="h1">
+              <span id="left-arrow-welcome">←</span> & <span id="right-arrow-welcome">→</span>
+            </Typography>        
+          </motion.div>
+          <Typography variant="caption" display="block">
+            drag "&" left to right
           </Typography>
-        </motion.div>
-        <motion.div className="motion-box" style={{ x }} drag="x" dragConstraints={{ left: 0, right: 0 }}>
-          <Typography className={classes.secondLine} variant="h1">
-            <span id="left-arrow-welcome">←</span> & <span id="right-arrow-welcome">→</span>
-          </Typography>        
-        </motion.div>
-        <Typography variant="caption" display="block">
-          drag "&" left to right
-        </Typography>
-        <motion.div className="motion-welcome-box2" style={{ background }}>
-          <Typography className={classes.thirdLine} variant="h1">
-            DEVELOP
-          </Typography>        
-        </motion.div>
-      </Paper>
-    </Grid>
+          <motion.div className="motion-welcome-box2" style={{ background }}>
+            <Typography className={classes.thirdLine} variant="h1">
+              DEVELOP
+            </Typography>        
+          </motion.div>
+        </Paper>
+    </motion.div>
+  </Grid>
   );
 }
 export default Welcome;

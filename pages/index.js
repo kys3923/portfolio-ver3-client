@@ -12,6 +12,7 @@ import { Paper, Grid } from '@material-ui/core'
 // importing pages
 import Welcome from '../components/landing/welcome'
 import Statement from '../components/landing/statement'
+import Skills from '../components/landing/skills'
 import About from '../components/landing/about'
 
 
@@ -41,6 +42,7 @@ export default function Home({ desWorks, devWorks }) {
         <Grid container>
           <Welcome />
           <Statement />
+          <Skills />
           <div className="title-devworks">
             <h3>Dev works</h3>
           </div>
