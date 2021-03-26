@@ -1,10 +1,9 @@
 import '../styles/globals.css'
 import React from 'react'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../src/theme';
-
 
 import Header from '../components/header'
 import Footer from '../components/footer'
@@ -23,15 +22,15 @@ export default function MyApp({ Component, pageProps }) {
     <React.Fragment>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
+          <Header />
+          <Component {...pageProps} />
+          <Footer />
       </ThemeProvider>
     </React.Fragment>
   )
 }
 
-MyApp.PropTypes = {
-  Component: PropTypes.elementType.isRequired,
-  pageProps: PropTypes.object.isRequired,
+MyApp.propTypes = {
+  Component: propTypes.elementType.isRequired,
+  pageProps: propTypes.object.isRequired,
 }
