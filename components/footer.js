@@ -12,7 +12,7 @@ const Footer = (props) => {
         </ul>
       </div>
       <div className="footer-copy">
-        <p>Made with ♥ & ☕️ &nbsp;<span id="copyright">©</span> designykim.com, YK, 2021</p>
+        <p>Made with ❤️,  ☕,  🍣, and  🎸&nbsp;<span id="copyright">©</span> designykim.com, YK, 2021</p>
       </div>
     </div>
   );

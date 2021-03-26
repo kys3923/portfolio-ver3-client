@@ -14,6 +14,7 @@ export default function LabPage({ post }) {
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </ Head>
       <h3>{post.Title}</h3>
+      <p>{post.content}</p>
     </div>
   )
 }
