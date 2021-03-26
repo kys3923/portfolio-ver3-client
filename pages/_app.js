@@ -1,20 +1,37 @@
 import '../styles/globals.css'
-import { ParallaxProvider } from 'react-scroll-parallax'
+import React from 'react'
+import PropTypes from 'prop-types'
+import { ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import theme from '../src/theme';
 
 
 import Header from '../components/header'
 import Footer from '../components/footer'
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
+
+  React.useEffect(() => {
+    // Remove the server-side injected CSS.
+    const jssStyles = document.querySelector('#jss-server-side');
+    if (jssStyles) {
+      jssStyles.parentElement.removeChild(jssStyles);
+    }
+  }, []);
+
   return (
-    <div>
-      <Header />
-      <ParallaxProvider>
+    <React.Fragment>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Header />
         <Component {...pageProps} />
-      </ParallaxProvider>
-      <Footer />
-    </div>
+        <Footer />
+      </ThemeProvider>
+    </React.Fragment>
   )
 }
 
-export default MyApp
+MyApp.PropTypes = {
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.object.isRequired,
+}

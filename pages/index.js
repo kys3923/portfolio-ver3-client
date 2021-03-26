@@ -17,7 +17,7 @@ export default function Home({ desWorks, devWorks }) {
         <link rel="icon" href="/img/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet"></link>
-        <script src="https://kit.fontawesome.com/2862dff1da.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </ Head>
       <Welcome />
       <Statement />

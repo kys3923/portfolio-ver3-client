@@ -1,6 +1,3 @@
-import { useState, useEffect } from 'react'
-import { Parallax } from 'react-scroll-parallax'
-
 const Welcome = (props) => {
 
   return (
