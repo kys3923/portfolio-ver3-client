@@ -1,12 +1,24 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { API_URL } from '../utils/urls'
+import cx from 'clsx'
 
 // importing material UI & framer motion
 import { motion, AnimatePresence } from 'framer-motion'
-import { makeStyles } from '@material-ui/core/styles'
-import { Paper, Grid } from '@material-ui/core'
-
+import { makeStyles, useTheme } from '@material-ui/core/styles'
+import { 
+  Grid,
+  CardContent,
+  Card,
+  CardMedia,
+} from '@material-ui/core'
+import {
+  useBlogTextInfoContentStyles
+} from '@mui-treasury/styles/textInfoContent/blog'
+import {
+  useOverShadowStyles
+} from '@mui-treasury/styles/shadow/over'
+import TextInfoContent from '@mui-treasury/components/content/textInfo'
 
 
 // importing pages
@@ -21,13 +33,81 @@ import About from '../components/landing/about'
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    // backgroundColor: 'rgb(246, 243, 240)',
   },
 
+}))
+
+const useStyles2 = makeStyles(({ breakpoints, spacing }) => ({
+  root: {
+    margin: 'auto',
+    borderRadius: spacing(2), // 16px
+    transition: '0.3s',
+    boxShadow: '0px 14px 80px rgba(34, 35, 58, 0.2)',
+    position: 'relative',
+    width: "70vw",
+    marginLeft: 'auto',
+    marginBottom: "5vh",
+    overflow: 'initial',
+    background: 'rgb(246, 243, 240)',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    paddingBottom: spacing(2),
+    [breakpoints.up('md')]: {
+      flexDirection: 'row',
+      paddingTop: spacing(2),
+    },
+  },
+  media: {
+    width: '80%',
+    maxWidth: '80%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginTop: spacing(-3),
+    height: 0,
+    paddingBottom: '48%',
+    borderRadius: spacing(2),
+    backgroundColor: '#fff',
+    position: 'relative',
+    [breakpoints.up('md')]: {
+      width: '100%',
+      marginLeft: spacing(-3),
+      marginTop: 0,
+      transform: 'translateX(-8px)',
+    },
+    '&:after': {
+      content: '" "',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      // backgroundImage: 'linear-gradient(147deg, #fe8a39 0%, #fd3838 74%)',
+      borderRadius: spacing(2), // 16
+      opacity: 0.5,
+    },
+  },
+  content: {
+    padding: 24,
+  },
+  cta: {
+    marginTop: 24,
+    textTransform: 'initial',
+  },
 }))
 
 export default function Home({ desWorks, devWorks }) {
   
   const classes = useStyles()
+  const styles = useStyles2()
+
+  const {
+    button: buttonStyles,
+    ...contentStyles
+  } = useBlogTextInfoContentStyles()
+
+  const shadowStyles = useOverShadowStyles()
 
   return (
     <div className={classes.root}>
@@ -46,46 +126,59 @@ export default function Home({ desWorks, devWorks }) {
           <div className="title-devworks">
             <h3>Dev works</h3>
           </div>
-          {devWorks &&
-            devWorks.map((devWork) => (
-              <div key={devWork.id} className="devWorks-container">
-                <div className="devWorks-card">
-                  <div className="devWorks-card-image">
-                    <Link href={`/dev/${devWork.name}`}><a><img src={devWork.bgImg[0].image} /></a></ Link>
-                  </div>
-                  <div className="devWorks-text">
-                    <Link href={`/dev/${devWork.name}`}><a><h3>{devWork.name}</h3></a></Link>
-                    <p>{devWork.tech.map((type) => (
-                      <span className="devWorks-text-tech" key={type.id}>{type.tech}</span>
-                    ))}
-                    </p>
-                  </div>
-                  {/* TODO: add card to display */}
-                </div>
-              </div>
-            ))
-          } 
+          <Grid item xs={12} style={{ margin: 0 }}>
+            <div className="cards">
+              {devWorks &&
+                devWorks.map((devWork) => (
+                  <Link  key={devWork.id} href={`/dev/${devWork.name}`}>
+                    <a>
+                      <Card className={cx(styles.root, shadowStyles.root)}>
+                        <CardMedia
+                          className={styles.media}
+                          image={devWork.bgImg[0].image}
+                        />
+                        <CardContent>
+                          <TextInfoContent
+                            classes={contentStyles}
+                            heading={devWork.name}
+                            body={devWork.type}
+                          />
+                        </CardContent>
+                      </Card>
+                    </a>
+                  </Link>
+                ))
+              } 
+            </div>
+          </Grid>
           <div className="title-devworks">
             <h3>Design works</h3>
           </div>
-          {desWorks &&
-            desWorks.map((desWork) => (
-              <div key={desWork.id} className="devWorks-container">
-                <div className="devWorks-card">
-                  <div className="devWorks-card-image">
-                    <Link href={`/design/${desWork.name}`}><a><img src={desWork.bgImg[0].image} /></a></Link>
-                  </div>
-                  <div className="devWorks-text">
-                    <Link href={`/design/${desWork.name}`}><a><h3>{desWork.name}</h3></a></Link>
-                    <p>{desWork.tech.map((type) => (
-                      <span className="devWorks-text-tech" key={type.id}>{type.tech}</span>
-                    ))}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))
-          }
+          <Grid item xs={12}>
+            <div className="cards">
+              {desWorks &&
+                desWorks.map((desWork) => (
+                  <Link key={desWork.id} href={`/design/${desWork.name}`}>
+                    <a>
+                      <Card className={cx(styles.root, shadowStyles.root)}>
+                        <CardMedia
+                          className={styles.media}
+                          image={desWork.bgImg[0].image}
+                        />
+                        <CardContent>
+                          <TextInfoContent
+                            classes={contentStyles}
+                            heading={desWork.name}
+                            body={desWork.type}
+                          />
+                        </CardContent>
+                      </Card>
+                    </a>
+                  </Link>
+                ))
+              }
+            </div> 
+          </Grid>
         </Grid>
       </AnimatePresence>
     </div>
