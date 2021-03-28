@@ -7,6 +7,7 @@ import theme from '../src/theme';
 
 import Header from '../components/header'
 import Footer from '../components/footer'
+import ScrollToTopBtn from '../components/scrollTop'
 
 export default function MyApp({ Component, pageProps }) {
 
@@ -23,8 +24,11 @@ export default function MyApp({ Component, pageProps }) {
       <ThemeProvider theme={theme}>
         <CssBaseline />
           <Header />
-          <Component {...pageProps} />
+          <div className="total-container">
+            <Component {...pageProps} />
+          </div>
           <Footer />
+          <ScrollToTopBtn />
       </ThemeProvider>
     </React.Fragment>
   )
