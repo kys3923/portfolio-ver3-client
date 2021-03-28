@@ -13,18 +13,18 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
   },
   firstLine: {
-    fontFamily: 'helvetica',
+    fontFamily: ['helvetica', 'roboto'],
     fontWeight: 900,
     fontSize: "9vw"
   },
   secondLine: {
-    fontFamily: 'helvetica',
+    fontFamily: ['helvetica', 'roboto'],
     fontWeight: 900,
     color: 'black',
     fontSize: "9vw"
   },
   thirdLine: {
-    fontFamily: 'helvetica',
+    fontFamily: ['helvetica', 'roboto'],
     fontWeight: 900,
     color: 'white',
     fontSize: "9vw"
