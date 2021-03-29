@@ -11,10 +11,6 @@ As a graphic designer, I expertise in producing, branding, and managing with cor
 
 Also as a developer, I am proficient in Front end and Back end, and I use object oriented computer languages, frameworks, and APIs.
 
-###### Skills - Development: `HTML` `CSS` `JavaScript` `Python` `Dart` `React` `Flutter` `Express.js` `Node.js` `MongoDB` `PostgreSQL` `EJS` `Next.js` `Flask` `Material-UI` 
-
-###### Skills - Graphic Design: `Photoshop` `illustrator` `inDesign` `Principle` `Sketch` `Figma` `Premier` `XD`
-
 <!-- add link to linkedIn, resume -->
 <!-- add link to portfolio -->
 
@@ -34,4 +30,4 @@ Auth
 
 • Maybe I will add test admin to explore adding forms
 
-###### Tech used for this portfolio: `Next.js` `Material-UI` `PostgreSQL` `jwt` `Prisma` `NextAuth.js`
+###### Tech used for this portfolio: `Next.js` `Material-UI` `PostgreSQL` `jwt` `strapi` `framer-motion` `mdx` `intl`

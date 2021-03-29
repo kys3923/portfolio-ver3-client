@@ -56,7 +56,7 @@ const Header = (props) => {
         <li><Link href="/devworks" ><a onClick={closeSlide}>DEV</a></Link></li>
         <li><Link href="/designworks" ><a onClick={closeSlide}>DESIGN</a></Link></li>
         <li><Link href="/lab" ><a onClick={closeSlide}>LAB</a></Link></li>
-        <li><Link href="/" ><a onClick={closeSlide}>CONTACT</a></Link></li>
+        <li><Link href="/contact" ><a onClick={closeSlide}>CONTACT</a></Link></li>
       </ul>
       <div className="burger" onClick={navSlide}>
         <div className="line1"></div>

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { motion } from 'framer-motion'
+
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -28,9 +30,9 @@ export default function ScrollToTop() {
   return (
     <div className="scroll-to-top">
       {isVisible && (
-        <div onClick={scrollToTop}>
+        <motion.div whileHover={{ scale: 1.25, rotate: 360 }} whileTap={{ scale: 1 }} onClick={scrollToTop}>
           <p>Top</p>
-        </div>
+        </motion.div>
       )}
     </div>
   );
