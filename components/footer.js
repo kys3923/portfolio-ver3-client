@@ -13,9 +13,9 @@ const Footer = (props) => {
         </div>
         <div className="footer-lists">
           <ul>
-            <li><a href="https://drive.google.com/file/d/1ludrrUAsFFopnH-OxWjIMLWrGdu_Vb29/view?usp=sharing" target="_blank"> <DescriptionIcon style={{ fontSize: '1.25em'}}/> &nbsp; <span id="Lheit-adj"> View Resume</span></a></li>
-            <li><a href="https://www.linkedin.com/in/youngsang-kim/" target="_blank"><LinkedInIcon style={{ fontSize: '1.25em'}}/> &nbsp; <span id="Lheit-adj">LinkedIn</span></a></li>
-            <li><a href="https://github.com/kys3923" target="_blank"><GitHubIcon style={{ fontSize: '1.25em'}}/> &nbsp; <span id="Lheit-adj">Github</span></a></li>
+            <li><a href="https://drive.google.com/file/d/1ludrrUAsFFopnH-OxWjIMLWrGdu_Vb29/view?usp=sharing" target="_blank"> <DescriptionIcon style={{ fontSize: '1em'}}/> &nbsp; <span id="Lheit-adj"> View Resume</span></a></li>
+            <li><a href="https://www.linkedin.com/in/youngsang-kim/" target="_blank"><LinkedInIcon style={{ fontSize: '1em'}}/> &nbsp; <span id="Lheit-adj">LinkedIn</span></a></li>
+            <li><a href="https://github.com/kys3923" target="_blank"><GitHubIcon style={{ fontSize: '1em'}}/> &nbsp; <span id="Lheit-adj">Github</span></a></li>
           </ul>
         </div>
         <div className="footer-copy">

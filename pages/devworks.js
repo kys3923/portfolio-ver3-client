@@ -7,21 +7,57 @@ import { makeStyles } from '@material-ui/core/styles'
 import { 
   Grid,
   Paper,
+  Card,
+  CardContent,
+  CardMedia,
 } from '@material-ui/core'
+
+import { motion } from 'framer-motion'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: '8vh',
+    marginTop: '4vh',
     flexGrow: 1,
+    padding: '3em'
   },
   title: {
-    padding: '9em',
+    padding: '6em',
+    paddingLeft: '4em'
   },
   titleText: {
     fontSize: '10vw',
     letterSpacing: '-0.5vw',
   },
-
+  cover: {
+    width: "100%%",
+    height: 151,
+  },
+  cardGrid: {
+    width: '400px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
+  card: {
+    padding: '1em',
+    textAlign: 'center'
+  },
+  list: {
+    paddingLeft: 0,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    flexWrap: 'wrap'
+  },
+  listItem: {
+    display: 'block',
+    padding: '1em 2em',
+    backgroundColor: 'grey',
+    borderRadius: '10px',
+    fontSize: '0.25rem',
+    color: 'white',
+    marginRight: '1em'
+  }
 }))
 
 export default function DevWorks( { works }) {
@@ -39,22 +75,45 @@ export default function DevWorks( { works }) {
 
       <div className={classes.root}>
         <Grid container>
-          <Grid item xs={12}>
-            <Paper className={classes.title} elevation={0}>
-              <h3 className={classes.titleText}>Dev.</h3>
-            </Paper>
-          </Grid>
-          <Grid container>
-            {works &&
-              works.map((work) => (
-                <Grid item className={classes.card} key={work.id} xs={6} sm={3} >
-                  <Paper className={classes.cardPaper}>
-                    <Link href={`/dev/${work.name}`}><a><img src={work.bgImg[0].image} /></a></Link>                    
-                  </Paper>
-                </Grid>
-              ))
-            }
-          </Grid>
+          <motion.div
+          key="devPageJS"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity:0 }}
+          >
+            <Grid item xs={12}>
+              <Paper className={classes.title} elevation={0}>
+                <h3 className={classes.titleText}>Dev.</h3>
+              </Paper>
+            </Grid>
+            <Grid container spacing={3}>
+              {works &&
+                works.map((work) => (
+                  <Grid item className={classes.cardGrid} key={work.id} xs={12} sm={6}>
+                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1}}>
+                      <Link href={`/dev/${work.name}`}>
+                        <a>
+                          <Card className={classes.card}>
+                            <CardMedia 
+                              className={classes.cover}
+                              image={work.bgImg[0].image}
+                              title={work.name}
+                            />
+                            <div className={classes.details}>
+                              <CardContent className={classes.content}>
+                                <h2>{work.name}</h2>
+                                <p>{work.type}</p>
+                              </CardContent>
+                            </div>
+                          </Card>
+                        </a>
+                      </Link>
+                    </motion.div>
+                  </Grid>
+                ))
+              }
+            </Grid>
+          </motion.div>
         </Grid>
       </div>
     </div>

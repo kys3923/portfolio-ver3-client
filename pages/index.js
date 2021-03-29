@@ -123,8 +123,8 @@ export default function Home({ desWorks, devWorks }) {
           <Welcome />
           <Statement />
           <Skills />
-          <div className="title-devworks">
-            <h3>Dev works</h3>
+          <div className="skills">
+            <h3>Dev</h3>
           </div>
           <Grid item xs={12} style={{ margin: 0 }}>
             <div className="cards">
@@ -151,8 +151,8 @@ export default function Home({ desWorks, devWorks }) {
               } 
             </div>
           </Grid>
-          <div className="title-devworks">
-            <h3>Design works</h3>
+          <div className="skills">
+            <h3>Design</h3>
           </div>
           <Grid item xs={12}>
             <div className="cards">
