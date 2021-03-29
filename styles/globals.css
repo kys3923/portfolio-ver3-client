@@ -488,3 +488,18 @@ a {
     opacity: 1;
   }
 }
+
+.work_link {
+  margin-top: 5vh;
+}
+
+.work-link {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.work-link:hover {
+  background-color: white;
+  border: none;
+}
