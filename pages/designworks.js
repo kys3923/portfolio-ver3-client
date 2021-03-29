@@ -92,7 +92,7 @@ export default function DesignWorks( { works }) {
               {works &&
                 works.map((work) => (
                   <Grid item className={classes.cardGrid} key={work.id} xs={12} sm={6}>
-                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1}}>
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 1}}>
                       <Link href={`/design/${work.name}`}>
                         <a>
                           <Card className={classes.card}>
