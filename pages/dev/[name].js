@@ -65,6 +65,8 @@ export default function DevWork({ work }) {
         <FormattedDate value={work.created_at} month='2-digit' year='numeric' />
     </IntlProvider>
   )
+  
+  let newLink = work.link!="" ? <p className="work_link"><a href={work.link} target="_blank" className="work-link">Live View</a></p> : <p className="work_link">Live View not available</p>
 
   return (
     <div>
@@ -106,7 +108,7 @@ export default function DevWork({ work }) {
                 </p>
                 <p>{work.task}</p>
                 <p>{work.solution}</p>
-                <p className="work_link"><a href={work.link} target="_blank" className="work-link">Live View</a></p>
+                {newLink}
               </Paper>
             </Grid>
           </motion.div>
