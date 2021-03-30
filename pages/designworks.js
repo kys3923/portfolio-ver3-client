@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     height: 151,
   },
   cardGrid: {
-    width: '400px',
+    width: '325px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',

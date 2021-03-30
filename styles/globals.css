@@ -197,6 +197,7 @@ a {
 
 .skills {
   padding-top: 3vh;
+  margin-bottom: 5vh;
   background-color: white;
   position: relative;
   width: 100%;
@@ -455,7 +456,11 @@ a {
 
 .cards {
   padding-top: 3vh;
-  padding-left: 3em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* padding-left: 3em; */
 }
 
 /* ========================================================= scroll top */
