@@ -6,16 +6,21 @@ import { motion } from 'framer-motion'
 
 const Footer = (props) => {
   return (
-    <motion.div exit={{ opacity: 0 }}>
+    <motion.div 
+      key="footerJS"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity:0 }}
+    >
       <div className="footer-container">
         <div className="footer-YK">
           <h3>YK | Portfolio</h3>
         </div>
         <div className="footer-lists">
           <ul>
-            <li><a href="https://drive.google.com/file/d/1ludrrUAsFFopnH-OxWjIMLWrGdu_Vb29/view?usp=sharing" target="_blank"> <DescriptionIcon style={{ fontSize: '1em'}}/> &nbsp; <span id="Lheit-adj"> View Resume</span></a></li>
-            <li><a href="https://www.linkedin.com/in/youngsang-kim/" target="_blank"><LinkedInIcon style={{ fontSize: '1em'}}/> &nbsp; <span id="Lheit-adj">LinkedIn</span></a></li>
-            <li><a href="https://github.com/kys3923" target="_blank"><GitHubIcon style={{ fontSize: '1em'}}/> &nbsp; <span id="Lheit-adj">Github</span></a></li>
+            <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }}><a href="https://drive.google.com/file/d/1ludrrUAsFFopnH-OxWjIMLWrGdu_Vb29/view?usp=sharing" target="_blank"> <DescriptionIcon style={{ fontSize: '1em'}}/> &nbsp; <span id="Lheit-adj"> View Resume</span></a></motion.li>
+            <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }}><a href="https://www.linkedin.com/in/youngsang-kim/" target="_blank"><LinkedInIcon style={{ fontSize: '1em'}}/> &nbsp; <span id="Lheit-adj">LinkedIn</span></a></motion.li>
+            <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }}><a href="https://github.com/kys3923" target="_blank"><GitHubIcon style={{ fontSize: '1em'}}/> &nbsp; <span id="Lheit-adj">Github</span></a></motion.li>
           </ul>
         </div>
         <div className="footer-copy">
