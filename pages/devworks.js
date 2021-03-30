@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: '-0.5vw',
   },
   cover: {
-    width: "100%%",
+    width: "100%",
     height: 151,
   },
   cardGrid: {
@@ -57,8 +57,16 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '0.25rem',
     color: 'white',
     marginRight: '1em'
+  },
+  secondContainer: {
+    width: '100%',
+    margin: 0,
+  },
+  firstContainer: {
+    width: '100%',
   }
 }))
+
 
 export default function DevWorks( { works }) {
 
@@ -74,9 +82,9 @@ export default function DevWorks( { works }) {
       </ Head>
 
       <div className={classes.root}>
-        <Grid container>
+        <Grid container className={classes.firstContainer}>
           <motion.div
-          key="devPageJS"
+          key="designPageJS"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity:0 }}
@@ -86,10 +94,10 @@ export default function DevWorks( { works }) {
                 <h3 className={classes.titleText}>Dev.</h3>
               </Paper>
             </Grid>
-            <Grid container spacing={3}>
+            <Grid container spacing={3} className={classes.secondContainer} direction="row" justify="center" alignItems="flex-start">
               {works &&
                 works.slice(0).reverse().map((work) => (
-                  <Grid item className={classes.cardGrid} key={work.id} xs={12} sm={6}>
+                  <Grid item className={classes.cardGrid} key={work.id}>
                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 1}}>
                       <Link href={`/dev/${work.name}`}>
                         <a>
