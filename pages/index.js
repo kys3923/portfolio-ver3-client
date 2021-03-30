@@ -25,7 +25,6 @@ import TextInfoContent from '@mui-treasury/components/content/textInfo'
 import Welcome from '../components/landing/welcome'
 import Statement from '../components/landing/statement'
 import Skills from '../components/landing/skills'
-import About from '../components/landing/about'
 
 
 // Material UI styles
