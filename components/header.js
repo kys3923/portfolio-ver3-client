@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import { motion } from 'framer-motion'
+
 
 const Header = (props) => {
 
@@ -49,20 +51,20 @@ const Header = (props) => {
 
   return (
     <nav className="header-nav">
-      <div className="logo">
-      <Link href="/"><a><img id="header-logo" src="/img/logo.png" /></a></Link>
-      </div>
+      <motion.div className="logo" whileHover={{ scale: 1.2, rotate: 360 }} whileTap={{ scale: 1 }}>
+        <Link href="/"><a><img id="header-logo" src="/img/logo.png" /></a></Link>
+      </motion.div>
       <ul className="nav-links">
-        <li><Link href="/devworks" ><a onClick={closeSlide}>DEV</a></Link></li>
-        <li><Link href="/designworks" ><a onClick={closeSlide}>DESIGN</a></Link></li>
-        <li><Link href="/lab" ><a onClick={closeSlide}>LAB</a></Link></li>
-        <li><Link href="/contact" ><a onClick={closeSlide}>CONTACT</a></Link></li>
+        <motion.li whileHover={{ scale: 1.25 }} whileTap={{ scale: 1 }}><Link href="/devworks" ><a onClick={closeSlide}>DEV</a></Link></motion.li>
+        <motion.li whileHover={{ scale: 1.25 }} whileTap={{ scale: 1 }}><Link href="/designworks" ><a onClick={closeSlide}>DESIGN</a></Link></motion.li>
+        <motion.li whileHover={{ scale: 1.25 }} whileTap={{ scale: 1 }}><Link href="/lab" ><a onClick={closeSlide}>LAB</a></Link></motion.li>
+        <motion.li whileHover={{ scale: 1.25 }} whileTap={{ scale: 1 }}><Link href="/contact" ><a onClick={closeSlide}>CONTACT</a></Link></motion.li>
       </ul>
-      <div className="burger" onClick={navSlide}>
+      <motion.div whileHover={{ scale: 1.2, rotate: 360 }} whileTap={{ scale: 1 }} className="burger" onClick={navSlide}>
         <div className="line1"></div>
         <div className="line2"></div>
         <div className="line3"></div>
-      </div>
+      </motion.div>
     </nav>
   );
 }

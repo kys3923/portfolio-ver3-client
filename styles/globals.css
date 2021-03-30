@@ -105,6 +105,10 @@ a {
     opacity: 0;
   }
 
+  .nav-links li:hover {
+    font-size: 1.5em;
+  }
+
   .burger {
     display: block;
     cursor: pointer;
@@ -503,3 +507,39 @@ a {
   background-color: white;
   border: none;
 }
+
+.markdown-container {
+  width: 100%;
+  border-top: 3px solid black;
+  padding-top: 3em;
+}
+
+.markdown-container img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.markdown-container a {
+  color: rgb(83, 122, 194);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+.markdown-container pre {
+  background-color: black;
+  color: white;
+  padding: 1.5em;
+  padding-left: 3em;
+  font-family: 'Source Code Pro', monospace;
+  line-height: 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.markdown-container blockquote {
+  border-left: 5px solid lightseagreen;
+  margin: 0;
+  padding-left: 3em;
+  font-style: italic;
+}
+
+
