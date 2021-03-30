@@ -44,9 +44,10 @@ const useStyles2 = makeStyles(({ breakpoints, spacing }) => ({
     transition: '0.3s',
     boxShadow: '0px 14px 80px rgba(34, 35, 58, 0.2)',
     position: 'relative',
-    width: "70vw",
-    marginLeft: 'auto',
-    marginBottom: "5vh",
+    width: "350px",
+    marginLeft: '5vw',
+    marginRight: '5vw',
+    marginBottom: "8vh",
     overflow: 'initial',
     background: 'rgb(246, 243, 240)',
     display: 'flex',
@@ -114,7 +115,6 @@ export default function Home({ desWorks, devWorks }) {
         <title>YK | Portfolio</title>
         <link rel="icon" href="/img/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet"></link>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </ Head>
       <AnimatePresence>
